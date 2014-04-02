@@ -34,7 +34,7 @@
 
     <body>
         <div class="Content">
-            <div id="gotop">˄</div>
+            <div id="gotop">藙</div>
 
 
             <header>
@@ -114,7 +114,7 @@
                     
                     <textarea name="entry.5.single" cols="30" rows="5"></textarea>
 
-                    <input type="submit" value="送出" name="submit">
+                    <input type="submit" value="閫佸嚭" name="submit">
 
                     </form>
                 </div>
