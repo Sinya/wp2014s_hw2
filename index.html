@@ -11,23 +11,17 @@
         <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Amarante' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js?ver=1.9.0" type="text/javascript"></script>
-        <script type="text/javascript">
-        $(function(){
-            $("#gotop").click(function(){
-                jQuery("html,body").animate({
-                    scrollTop:0
-                },1000);
-            });
-            $(window).scroll(function() {
-                if ( $(this).scrollTop() > 300){
-                    $('#gotop').fadeIn("fast");
-                } else {
-                    $('#gotop').stop().fadeOut("fast");
-                }
-            });
-        });
-        </script>
+        
         <script type="text/javascript">var _jf = _jf || [];_jf.push(['_setAppId','1561033aj0ruUX0A0Nv_aFWjfebapRap3j91sh6paY9xcBAGQjUUWwoTxVRjSAoo23UrQrdxzJptjyvIoXTxnd0ifaOfPstzfXk9a-6jPf8rI6oqufxBfmdWyiu-krtQFMVF25MYeydbvOuRLPCJAKF7MQyRC1N64eo2i9xQ028sFCFthY0=']);_jf.push(['p','27294']);_jf.push(['_setFont','wt011','css','body']);_jf.push(['_setFont','hanamin','css','.menu ul li']);(function(f,q,c,h,e,i,r,d){var k=f._jf;if(k.constructor===Object){return}var l,t=q.getElementsByTagName("html")[0],a=function(u){for(var v in k){if(k[v][0]==u){if(false===k[v][1].call(k)){break}}}},j=/\S+/g,o=/[\t\r\n\f]/g,b=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,g="".trim,s=g&&!g.call("\uFEFF\xA0")?function(u){return u==null?"":g.call(u)}:function(u){return u==null?"":(u+"").replace(b,"")},m=function(y){var w,z,v,u,x=typeof y==="string"&&y;if(x){w=(y||"").match(j)||[];z=t[c]?(" "+t[c]+" ").replace(o," "):" ";if(z){u=0;while((v=w[u++])){if(z.indexOf(" "+v+" ")<0){z+=v+" "}}t[c]=s(z)}}},p=function(y){var w,z,v,u,x=arguments.length===0||typeof y==="string"&&y;if(x){w=(y||"").match(j)||[];z=t[c]?(" "+t[c]+" ").replace(o," "):"";if(z){u=0;while((v=w[u++])){while(z.indexOf(" "+v+" ")>=0){z=z.replace(" "+v+" "," ")}}t[c]=y?s(z):""}}},n;k.push(["_eventActived",function(){p(h);m(e)}]);k.push(["_eventInactived",function(){p(h);m(i)}]);k.addScript=n=function(u,A,w,C,E,B){E=E||function(){};B=B||function(){};var x=q.createElement("script"),z=q.getElementsByTagName("script")[0],v,y=false,D=function(){x.src="";x.onerror=x.onload=x.onreadystatechange=null;x.parentNode.removeChild(x);x=null;a("_eventInactived");B()};if(C){v=setTimeout(function(){D()},C)}x.type=A||"text/javascript";x.async=w;x.onload=x.onreadystatechange=function(G,F){if(!y&&(!x.readyState||/loaded|complete/.test(x.readyState))){y=true;if(C){clearTimeout(v)}x.src="";x.onerror=x.onload=x.onreadystatechange=null;x.parentNode.removeChild(x);x=null;if(!F){setTimeout(function(){E()},200)}}};x.onerror=function(H,G,F){if(C){clearTimeout(v)}D();return true};x.src=u;z.parentNode.insertBefore(x,z)};a("_eventPreload");m(h);n(r,"text/javascript",false,3000)})(this,this.document,"className","jf-loading","jf-active","jf-inactive","//ds.justfont.com/js/stable/v/2.7/id/115053824457");</script>
 
        
@@ -35,11 +29,12 @@
 
     <body>
         <div class="Content">
-        <div id="gotop">˄</div>
 
             <header>
-                <img id="peng" src="http://i.imgur.com/4mGQ2gk.png"/>
-                <img id="pong" src="http://i.imgur.com/vTeYy1a.png">
+                <figure>
+                    <img id="peng" src="http://i.imgur.com/4mGQ2gk.png"/>
+                    <img id="pong" src="http://i.imgur.com/vTeYy1a.png">
+                </figure>
 
             </header>
         
@@ -56,212 +51,181 @@
                     <span class="mine-icon-wrap">
                     <img id="phineas" src="http://i.imgur.com/RynrAxA.png" class="mine-icon"> 
                     </span>
-                    <h3 class="mine-title">CONTACT ME</h3>
+                    <h2 class="mine-title">CONTACT ME</h2>
                 </a>
                  
 
             </nav>
-            <section>
-                <article>
+            <section class = "theSquares">
 
-              
-                <div class= "square yellow text">
-                    <p><mark>
-                    Personal profile</mark>
-                    <p>
-                    彭新雅<br/>
-                    Sinya, Peng<br/>
-                    <time>1993-08-06</time><br/>
-                    
-                </p>
-                    </p>
-                </div>
+                    <div id="profile" class= "square yellow text">
+                        <h3>Personal profile</h3>
+                        <p>
+                        <mark>彭新雅</mark>&rarr;<br/>
+                        Sinya, Peng<br/>
+                        <time>1993-08-06</time><br/>
+                        
+                        </p>
+                       
+                    </div>
 
 
-                <div class= "square move">
-                   <img id="me" src="http://i.imgur.com/FTDv97D.jpg" />
-                </div>
+                    <div class= "square move">
+                       <img id="me" src="http://i.imgur.com/FTDv97D.jpg" />
+
+                    </div>
+
+                    <div class= "square red">
+                        <h3>Education</h3>
+                        <p> 
+                        最高學歷：<br/>國立政治大學<br/>資訊科學系<br/>(2011.09~迄今)<br/>
+                        </p>
+                    </div>
+
+                    <div class= "square ">
+                       
+                    </div>
+
+                    <div class= "square move">
+                        <img src="http://i.imgur.com/29wflfa.jpg" />
+
+                    </div>
+
+                    <div class= "square">
+                        <h3>Personal profile</h3>
+                        <p>  
+                        &larr;系級：資科系大三<br/>
+                        住在：莊敬九舍<br/>
+                        </p>
+
+                    </div>
+
+                    <div class= "square move">
+                        <img id="handdraw2" src="http://i.imgur.com/3qJvOXs.jpg" />
+
+                    </div>
+
+                    <div class= "square move">
+                       <img id="depp" src="http://i.imgur.com/sjMhDel.jpg?1" />
+                    </div>
+
+                    <div class= "square black">
+                         <h3><mark>Favorite People</mark></h3>
+                        <p>
+                        伊坂幸太郎 &rarr;<br/> 
+                        阿部寬<br/>
+                        &larr; Johnny Depp<br/>
+                        我家人<br/>
+                        &darr;
+                        </p>
+                    </div>
+                    <div class= "square move">
+                    <img id="book" src="http://2.blog.xuite.net/2/c/7/0/12379045/blog_489243/txt/26658615/3.jpg" />
+                    </div>
+
+                    <div class= "square">
+                        <h3>Skill</h3>
+                        <p>
+                        手作東西 &uarr;<br/> 
+                        挑禮物<br/>              
+                        吃拉麵<br/>
+                        </p>
+                    </div>
+
+                    <div id="child" class= "http://i.imgur.com/vV8CeWG.jpg" >
+                    </div>
+
+                    <div class= "square red">
+                        <h3>Singers & Bands</h3>
+                        <p>
+                        Maroon 5<br/>
+                        ThePianoGuys<br/>
+                        Greenn Day<br/>
+                        Jason Mraz<br/>
+                        </p>
+                    </div>
+
+                    <div id="handdraw" class= "square move">
+                       <img src="http://i.imgur.com/h1qDsF8.jpg" />
+                    </div>
+
+                    <div class= "square yellow">
+                    </div>
 
 
+                    <div class= "square move">
+                        <img src="http://i.imgur.com/ebNz1QR.jpg" />
 
+                    </div>
 
-                <div class= "square red">
-                    <p>
-                    Education
-                    <p> 
-                    最高學歷：<br/>國立政治大學<br/>資訊科學系<br/>(2011.09~迄今)<br/>
-                    </p>
-                    </p>
-                </div>
-
-                <div class= "square ">
                    
-                </div>
 
-                <div class= "square move">
-                    <img src="http://i.imgur.com/29wflfa.jpg" />
+                    <div id="drawing" class= "square move">
+                       <img src="http://i.imgur.com/JpMqsFY.jpg" />
+                    </div>
 
-                </div>
+                    <div class= "square">
+                        <h3>Likes ❤</h3>
+                        <p>&larr; 
+                        隨手畫畫 &rarr;<br/>
+                        看別人攝影<br/>
+                        看推理小說<br/>
+                        籃球<br/>
+                        </p>
+                    </div>
 
-                <div class= "square">
-                    <p>
-                    Personal profile
-                    <p>  
-                    系    級：<br/>資訊科學系大三<br/>
-                    住在：<br/>
-                    莊敬九舍<br/>
-                    </p>
-                    </p>
+                    <div class= "square move">
+                       <img src="http://i.imgur.com/sWMaLrP.jpg"/>
+                    </div>
 
-                </div>
+                    <div class= "square black">
+                        <h3><mark>The Places I Like</mark></h3>
+                        <p>
+                        政大河堤藝中屋頂<br/>
+                        桃園縣全部<br/>
+                        球場 &uarr;<br/>
+                        日本銀山溫泉區<br/>
+                        </p>
 
-                <div class= "square move">
-                    <img id="handdraw2" src="http://i.imgur.com/3qJvOXs.jpg" />
+                    </div>
 
-                </div>
+                     <div class= "square move">
+                        <img src="http://i.imgur.com/fxWZKti.jpg" />
 
-                <div class= "square move">
-                   <img id="family" src="http://i.imgur.com/G0cSEG8.jpg" />
-                </div>
+                    </div>
 
-                <div class= "square black">
-                     <p><mark>
-                    Favorite People</mark>
-                    <p>
-                    伊坂幸太郎<br/> 
-                    阿部寬<br/>
-                    Johnny Depp<br/>
-                    我家人<br/>
-                    </p>
-                    </p>
-                </div>
-                <div class= "square move">
-                <img id="book" src="http://2.blog.xuite.net/2/c/7/0/12379045/blog_489243/txt/26658615/3.jpg" />
-                </div>
-
-                <div class= "square">
-                    <p>
-                    Skill
-                    <p>
-                    手作東西<br/> 
-                    挑禮物<br/>              
-                    吃拉麵<br/>
-                    </p>
-                    </p>
-                </div>
-
-                <div id="child" class= "http://i.imgur.com/vV8CeWG.jpg" >
-                </div>
-
-                <div class= "square red">
-                    <p>
-                    Singers & Bands
-                    <p>
-                    Maroon 5<br/>
-                    ThePianoGuys<br/>
-                    Greenn Day<br/>
-                    Jason Mraz<br/>
-                    </p>
-                    </p>
-                </div>
-
-                <div id="handdraw" class= "square move">
-                   <img src="http://i.imgur.com/h1qDsF8.jpg" />
-                </div>
-
-                <div class= "square yellow">
-                </div>
+                     <div id="doof" class= "square move">
+                       <img src="http://i.imgur.com/YYNmg8j.png" />
+                    </div>
 
 
-                <div class= "square move">
-                    <img src="http://i.imgur.com/ebNz1QR.jpg" />
-
-                </div>
-
-               
-
-                <div id="drawing" class= "square move">
-                   <img src="http://i.imgur.com/JpMqsFY.jpg" />
-                </div>
-
-                <div class= "square">
-                    <p>
-                    Likes ❤
-                    <p>
-                    隨手畫畫<br/>
-                    看別人攝影<br/>
-                    看推理小說<br/>
-                    籃球<br/>
-                    </p>
-                    </p>
-                </div>
-
-                <div class= "square move">
-                   <img src="http://i.imgur.com/sWMaLrP.jpg"/>
-                </div>
-
-                <div class= "square black">
-                    <p><mark>
-                    The Places I Like</mark>
-                    <p>
-                    政大河堤藝中屋頂<br/>
-                    桃園縣全部<br/>
-                    球場<br/>
-                    日本銀山溫泉區<br/>
-                </p>
-                    </p>
-
-                </div>
-
-                 <div class= "square move">
-                    <img src="http://i.imgur.com/fxWZKti.jpg" />
-
-                </div>
-
-                 <div id="doof" class= "square move">
-                   <img src="http://i.imgur.com/UVgzbYi.jpg" />
-                </div>
+                    <div class= "square">
+                        <h3>The Videos I Like</h3>
+                        <p>
+                        哈利波特第七集<br/>
+                        追愛總動員<br/>
+                        &larr;Phineas and Ferb<br/>
+                        Inception<br/>
+                        </p>
+                    </div>
 
 
-                <div class= "square">
-                    <p>
-                    The Videos I Like
-                    <p>
-                    哈利波特第七集<br/>
-                    追愛總動員<br/>
-                    Phineas and Ferb<br/>
-                    Inception<br/>
-                </p>
-                    </p>
-                </div>
+                    <div class= "square yellow">
+                    </div>
+
+                    <div class= "square move">
+                       <img id="firework" src="http://i.imgur.com/c3FsyrF.jpg" />
+                    </div>
+
+                    <div class= "square red">
+                    </div>
 
 
-                <div class= "square yellow">
-                </div>
+                </section> 
+            <div id="flower"></div>
 
-                <div class= "square move">
-                   <img id="firework" src="http://i.imgur.com/c3FsyrF.jpg" />
-                </div>
 
-                <div class= "square orange jump ">
-                    <p>
-                    HELLO ! <br/>HELLO !
-                    d(^_^o)<br/>
-                    </p>
-                </div>            
-<!-- 
-                <div class= "jump square">
-                    <p>
-                    Jump
-                    </p>
-                </div>
- -->
-
-            </article>
-        </section> 
-
-            <footer><img src="http://i.imgur.com/YE55sf0.png" /><br/>
-            HELLO ! HELLO ! <br/>
+            <footer><img src="http://i.imgur.com/d1KOVfs.png" /><br/>
             </footer>
         </div>  
 
