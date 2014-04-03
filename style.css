@@ -8,7 +8,7 @@
 
   }
 
-  h3, p{
+  .square h3, p{
     font-family: 'Amarante';
   }
 
@@ -48,12 +48,15 @@
     /*margin-top: 1cm; */
     width: 400px;
     height: 400px;
-    opacity: 0;
-    -o-transition: 4s;
-    -webkit-transition: 4s;
-    -moz-transition: 4s;
-    transition: 4s;
     z-index: 0;
+  }
+
+  #pong { 
+    opacity: 0;
+    -o-transition: 2s;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    transition: 2s;
   }
 
   header:hover #pong {
@@ -221,10 +224,10 @@
 
 
   .container {
+    position: relative;
     max-width: 1200px; 
     margin: 0 auto; 
     padding-top: 40px;
-    position: relative;
   }
 
   .mine-item {
