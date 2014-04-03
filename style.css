@@ -8,7 +8,7 @@
 
   }
 
-  h3, p{
+  .square h3, p{
     font-family: 'Amarante';
   }
 
@@ -221,6 +221,7 @@
 
 
   .container {
+    position: relative;
     max-width: 1200px; 
     margin: 0 auto; 
     padding-top: 40px;
