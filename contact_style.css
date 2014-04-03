@@ -27,6 +27,9 @@
     padding: 0cm;
     float: left;
     width: 50%;
+    z-index: 2;
+    position: relative;
+   
   }
 
   #sinya {
@@ -44,7 +47,11 @@
     position: relative;
     width: 400px;
     height: 400px;
-    opacity: 0.1;
+    opacity: 0;
+    -o-transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    transition: 4s;
     z-index: 0;
 
   }
@@ -62,7 +69,7 @@
   }
 
   header:hover #pong{
-    opacity: 0.8; 
+    opacity: 1; 
     -o-transition: opacity 2s linear;
     -webkit-transition: opacity 2s linear;
     -moz-transition: opacity 2s linear;
@@ -228,6 +235,8 @@
   .container {
     max-width: 1200px; 
     padding-top: 80px;
+    z-index: 2;
+    position: relative; 
   }
 
   .mine-item {
@@ -280,6 +289,7 @@
 
   
   .ContactForm {
+    font-family: 'Amarante';
     font-size: 1.4em;
     clear:both;
     text-align: left;
@@ -290,18 +300,26 @@
     box-shadow: 0 0 15px -7px #000;
     border: 1px solid #c3cada;
     border-radius: 3px;
+    z-index: 2;
+    position: relative;
   }
 
-  .ContactForm p:before {
+  .ContactForm h3:before {
     content: "◈  ";
+    margin-left: 1em;
   }
 
   form p{
     padding-left: 1.2em;
   }
 
-  input[type="radio"], input[type="checkbox"], select {
+  input[type="radio"], input[type="checkbox"] {
     margin-left: 5em;
+  }
+
+  select {
+        margin-left: 2.5em;
+        font-size: 1em;
   }
 
   textarea {
@@ -323,7 +341,7 @@
   }
 
   input[type="text"]:focus{
-    border-left: 3px solid #fe655d;
+    border-left: 6px solid #fe655d;
     -webkit-transition: border .2s ease;
     -moz-transition: border .2s ease;
     -o-transition: border .2s ease;
@@ -343,6 +361,7 @@
     border: 1px solid #e0514b;
     border-radius: 3px;
     transition: all .2s ease;
+    font-size: 1.2em;
     }
 
   input[type="submit"]:hover {
@@ -351,26 +370,66 @@
     top: 5px;
   }
 
+  input {
+    outline: none;
+  }
+
+  #flower{
+    background:none;
+    background-image: url('http://i.imgur.com/gJebRI2.png'), url('http://i.imgur.com/ljqv8bt.png'), url('http://i.imgur.com/fOLtHfD.png');
+    position: absolute;
+    margin-left: 60px;
+    top: 1cm;
+    border-radius: 200px;
+    width: 1200px;
+    height: 1800px;
+    -o-transition: 3s;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    transition: 3s;  
+    -webkit-animation: flower 20s linear infinite;
+    -moz-animation: flower 20s linear infinite;
+    -ms-animation: flower 20s linear infinite;
+    animation: flower 20s linear infinite;
+  }
+
+  @keyframes flower {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    65% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  }
+  @-moz-keyframes flower {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    65% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+  }
+  @-webkit-keyframes flower {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    65% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  }
+  @-ms-keyframes flower {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    65% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  } 
+
 
   footer {
-    /*padding: 1cm;*/
+    font-family: 'Amarante';
     clear: both;
     text-align: center;
-    padding: 2cm;
+    padding: 1cm;
     font-size: 1.5em;
   }
 
   footer img {
+    z-index: 2;
+    position: relative;
     vertical-align: middle;
     margin: 0;
     padding: 0;
-    width: 110%;
+    width: 105%;
     height: 110%;
   }
-
-
-
-input {
-  outline: none;
-}
 

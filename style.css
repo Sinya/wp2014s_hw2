@@ -1,4 +1,6 @@
-  
+  @import url(http://cs.nccu.edu.tw/~jonesyu/960gs/code/css/960.css);
+
+
   body {
     /*background: #F0E68C;*/
     font-family: 'Nothing You Could Do',Georgia,"微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
@@ -6,12 +8,12 @@
 
   }
 
-  p:first-child {
+  h3, p{
     font-family: 'Amarante';
   }
 
   .Content {
-    background: url(http://kabegami.tank.jp/flo2/flo209/c.gif) repeat;
+    background: url(http://i.imgur.com/VAcCuFu.gif) repeat;
     padding: 0em 1em 1em 1em;
     border-radius: 40px 385px 235px 185px;
     box-shadow: #808080 0px 5px 10px 10px;
@@ -26,18 +28,6 @@
 	div {
 		 	/*border: 1px solid green;*/
 	}
-
-  #gotop {
-    display: none;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;    
-    padding: 5px 30px;    
-    background: #777;
-    font-size: 3em;
-    color: white;
-    cursor: pointer;
-  }
 
   header {
     margin: 0cm;
@@ -58,7 +48,11 @@
     /*margin-top: 1cm; */
     width: 400px;
     height: 400px;
-    opacity: 0.1;
+    opacity: 0;
+    -o-transition: 4s;
+    -webkit-transition: 4s;
+    -moz-transition: 4s;
+    transition: 4s;
     z-index: 0;
   }
 
@@ -277,7 +271,7 @@
 
   section {
     vertical-align: middle;
-    margin-left: 4em;
+    margin-left: 38px;
     padding: 0 auto;
   }
 
@@ -291,9 +285,11 @@
   	float: left;
   	position: relative;
   	overflow: hidden;
-  	margin: 3px;
-    /*opacity: 0.5;*/
-
+  	margin: 9px;
+    -o-transition: 3s;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    transition: 3s;
   }
 
 
@@ -305,7 +301,7 @@
   transition: border-radius 1s linear;
   }
 
-  article:hover .move:not(:hover) {
+  .theSquares:hover .move:not(:hover) {
   opacity: 0.5;
   -o-transition: opacity 1s linear;
   -webkit-transition: opacity 1s linear;
@@ -314,13 +310,24 @@
   }
  
   .square p {
-
-  text-align: center;
-  font-size: 1.5em;
-  margin: 30px;
+    text-align: center;
+    font-size: 1.8em;
+    margin: 0 auto;
   /*word-break: normal;*/
 
   }
+
+  .square h3 {
+    font-size: 1.9em;
+    margin: 20px;
+    text-align: center;
+    margin: 20px, 20px ,0px, 20px;
+  }
+
+  #profile p{
+    font-size: 2.5em;
+  }
+
   .black {
     color: white;
   }
@@ -391,25 +398,59 @@
     opacity: 1;
   }
 
-  .jump {
-    /*border-radius: 50% / 100% 100% 0 0;*/
-    -webkit-animation: icon-bounce 2s infinite alternate;
-    -moz-animation: icon-bounce 2s infinite alternate;
-    -o-animation: icon-bounce 2s infinite alternate;
-    animation: icon-bounce 2s infinite alternate;
+/*
+  .ball img {
+  width: 20%;
+  height: 20%;
+  -webkit-animation: moveing 2.5s infinite;
   }
 
-  .jump p {
-    vertical-align: middle;
-    text-align: center;
-    font-size: 2em;
-  }
+  @-webkit-keyframes spin {
+     0% { -webkit-transform: rotate(-180deg); }
+     100% { -webkit-transform: rotate(360deg); }
+  }*/
+
+#flower{
+  background:none;
+  background-image: url('http://i.imgur.com/gJebRI2.png'), url('http://i.imgur.com/ljqv8bt.png'), url('http://i.imgur.com/fOLtHfD.png');
+  position: relative;
+  margin-left: 60px;
+  bottom: -55cm;
+  width: 1100px;
+  height: 390px;
+  -o-transition: 3s;
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  transition: 3s;  
+  -webkit-animation: flower 20s linear infinite;
+  -moz-animation: flower 20s linear infinite;
+  -ms-animation: flower 20s linear infinite;
+  animation: flower 20s linear infinite;
+}
+
+@keyframes flower {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  65% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes flower {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  65% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes flower {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  65% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes flower {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  65% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+} 
+
 
   
-  .ContactForm {
-    clear:both;
-  }
-
   footer {
     /*padding: 1cm;*/
     clear: both;
@@ -420,7 +461,7 @@
 
   footer img {
     vertical-align: middle;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 50%;
     height: 50%;
