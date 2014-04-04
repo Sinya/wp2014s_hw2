@@ -27,7 +27,7 @@
     padding: 0cm;
     float: left;
     width: 50%;
-    z-index: 2;
+    z-index: 5;
     position: relative;
    
   }
@@ -279,6 +279,8 @@
     margin: 0;
     padding: 0 20px;
     margin-top: 140px;
+    color: #000;
+    text-decoration: none;
   }
 
   section {
@@ -287,7 +289,6 @@
     padding: 0 auto;
   }
 
-  
   .ContactForm {
     font-family: 'Amarante';
     font-size: 1.4em;
@@ -318,8 +319,8 @@
   }
 
   select {
-        margin-left: 2.5em;
-        font-size: 1em;
+    margin-left: 2.5em;
+    font-size: 1em;
   }
 
   textarea {
