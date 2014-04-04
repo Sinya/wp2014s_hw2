@@ -82,6 +82,7 @@
     text-decoration: none;
   }
   a:hover, a:active {
+    color: #000;
     text-decoration: underline;
   }
 
@@ -294,8 +295,8 @@
     font-size: 1.4em;
     clear:both;
     text-align: left;
-    margin-left: 380px;
-    margin-right: 350px;
+    margin-left: 300px;
+    margin-right: 340px;
     -moz-box-shadow: 0 0 15px -7px #000;
     -webkit-box-shadow: 0 0 15px -7px #000;
     box-shadow: 0 0 15px -7px #000;
@@ -305,9 +306,13 @@
     position: relative;
   }
 
+  form {
+    padding: 2em;
+  }
+
   .ContactForm h3:before {
     content: "◈  ";
-    margin-left: 1em;
+    margin-left: -1em;
   }
 
   form p{
@@ -315,18 +320,17 @@
   }
 
   input[type="radio"], input[type="checkbox"] {
-    margin-left: 5em;
+    /*margin-left: 5em;*/
   }
 
   select {
-    margin-left: 2.5em;
+    /*margin-left: 2.5em;*/
     font-size: 1em;
   }
 
   textarea {
-  width: 90%;
+  width: 100%;
   height: 200px; 
-  margin-left: 20px;
   font-size: 1.4em;
 
   }
@@ -354,7 +358,7 @@
     background-color: #fe655d;
     border: none;
     display: block;
-    width: 90%;
+    width: 100%;
     height: 60px;
     margin: 0 auto;
     color: #fff;
