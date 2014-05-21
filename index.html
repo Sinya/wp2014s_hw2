@@ -36,6 +36,16 @@
     </head>
 
     <body>
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=695992260466129&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
         <div class="Content">
 
             <header>
@@ -232,10 +242,14 @@
                 </section> 
             <div id="flower"></div>
 
+            <div class="fb-like" data-href="http://sinya.github.io/wp2014s_hw2/index.html" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
 
             <footer><img src="http://i.imgur.com/d1KOVfs.png" /><br/>
             </footer>
         </div>  
+
+
 
     </body>
 
