@@ -333,9 +333,9 @@ alert('Post ID: ' + response.id);
 			if (response.authResponse) { // if user login to your apps right after handle an event
 			window.location.reload();
 			};
-			}/*, {
+			}, {
 scope: 'user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes'
-}*/);
+});
 } else {
 	console.log("this isn't logged in to Facebook.");
 	FB.login(function (response) {
