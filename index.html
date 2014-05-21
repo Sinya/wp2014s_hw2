@@ -48,12 +48,12 @@
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=695992260466129&version=v2.0";
-		  fjs.parentNode.insertBefore(js, fjs);
-		  }(document, 'script', 'facebook-jssdk'));</script>
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=695992260466129&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="Content">
 
@@ -285,30 +285,28 @@ FB.getLoginStatus(function (response) {
 			});
 
 
-FB.ui({
+		FB.ui({
 method: 'share',
 href: 'http://sinya.github.io/wp2014s_hw2/index.html',
 }, function (response) {});
 
 
-FB.ui({
+		FB.ui({
 method: 'send',
 link: 'http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html',
 });
 
 
-
 FB.api('/me/likes', function (response) {
-  for (var i = 0; i < response.data.length; i++){
-  console.log(response.data[i].name);
-  }
-  });
+		for (var i = 0; i < response.data.length; i++){
+		console.log(response.data[i].name);
+		}
+		});
 
 FB.api('/me/picture?type=normal', function(response) { // normal/large/squere 
-  var str="<img src="+ response.data.url +">";
-  $('body').append(str);
-  });
-
+		var str="<img src="+ response.data.url +">";
+		$('body').append(str);
+		});
 
 
 FB.api('/me/photos', 'post', {
@@ -322,7 +320,7 @@ alert('Error occured:' + response);
 alert('Post ID: ' + response.id);
 }
 });
- 				
+
 
 
 
