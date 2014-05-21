@@ -279,28 +279,29 @@ FB.getLoginStatus(function (response) {
 		var accessToken = response.authResponse.accessToken;
 		FB.api('/me', function (response) {
 			console.log(response);
-			console.log('My links is' + response.link);
-			console.log('My Username is' + response.username);
-			console.log('My ID is' + response.id);
+			console.log('My links is ' + response.link);
+			console.log('My Username is ' + response.username);
+			console.log('My ID is ' + response.id);
 			});
-
+/*
 
 FB.ui({
 method: 'share',
 href: 'http://sinya.github.io/wp2014s_hw2/index.html',
 }, function (response) {});
 
-/*
+
 FB.ui({
 method: 'send',
 link: 'http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html',
 });
+
 */
 
 
 FB.api('/me/likes', function (response) {
-  for (var i = 0; i < response.length; i++){
-  console.log(response.data.name);
+  for (var i = 0; i < response.data.length; i++){
+  console.log(response.data[i].name);
   }
   });
 
