@@ -17,6 +17,10 @@
 	line-height: 50px;
 }
 
+#content h2>ul>li{
+	padding-bottom: 40px;
+}
+
 .p {
 	font-size: 20px;
 }
