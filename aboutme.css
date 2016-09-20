@@ -14,7 +14,7 @@
 
 #content h2{
 	color: #020202;
-	line-height: 50px;
+	/*line-height: 50px;*/
 }
 
 #content h2>ul>li{
