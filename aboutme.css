@@ -18,12 +18,12 @@
 #slide1 h1 {
 	font-size: 3.8em;
 	letter-spacing: -3px;
-	color:#8a8683;
+	color:#020202;
 	font-weight: 700;
 }
 #slide1 h2 {
 	font-size: 2em;
-	color: #8a8683;
+	color: #020202;
 	padding-bottom:20px;
 	font-weight: 400;
 }
@@ -62,18 +62,18 @@
 #slide3 h1 {
 	font-size: 3.8em;
 	letter-spacing: -3px;
-	color:#8a8683;
+	color:#020202;
 	font-weight: 700;
 }
 #slide3 h2 {
 	font-size: 2em;
-	color: #8a8683;
+	color: #020202;
 	padding-bottom:20px;
 	font-weight: 400;
 }
 #test{
 	background-color:#81C7D4;
-	color:#8a8683;
+	color:#020202;
 	text-align:center;
 	font-size: 2em;
 	font-weight: 400;
@@ -90,7 +90,7 @@
 
 #slide4{
 	background-image:url("./images/rocket.png");
-	background-color:#8a8683;
+	background-color:#020202;
 	color:#ffffff;
 }
 #slide4 h1 {
