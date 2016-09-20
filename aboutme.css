@@ -16,6 +16,10 @@
 	color: #020202;
 	line-height: 50px;
 }
+
+.p {
+	font-size: 20px;
+}
 /* Slide 1 */ 
 
 #slide1{
@@ -96,7 +100,7 @@
 
 #slide4{
 	background-image:url("./images/rocket.png");
-	background-color:#020202;
+	/*background-color:#020202;*/
 	color:#ffffff;
 }
 #slide4 h1 {
