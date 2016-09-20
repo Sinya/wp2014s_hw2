@@ -8,11 +8,14 @@
 	padding:140px 0;
 }
 
-#content{
+#content h1{
 	color: #020202;
-	line-height: 80px;
 }
 
+#content h2{
+	color: #020202;
+	line-height: 90px;
+}
 /* Slide 1 */ 
 
 #slide1{
