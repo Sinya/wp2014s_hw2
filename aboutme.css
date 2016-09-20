@@ -14,7 +14,7 @@
 
 #content h2{
 	color: #020202;
-	line-height: 90px;
+	line-height: 50px;
 }
 /* Slide 1 */ 
 
@@ -47,12 +47,12 @@
 #slide2 h1 {
 	font-size: 3.8em;
 	letter-spacing: -3px;
-	color:#ffffff;
+	/*color:#ffffff;*/
 	font-weight: 700;
 }
 #slide2 h2 {
 	font-size: 2em;
-	color: #ffffff;
+	/*color: #ffffff;*/
 	padding-bottom:20px;
 	font-weight: 400;
 }
