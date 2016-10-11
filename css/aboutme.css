@@ -48,7 +48,7 @@
 /* Slide 2 */ 
 
 #slide2{
-	background-image:url("./images/paperplane.png");
+	background-image:url("../images/paperplane.png");
 	background-color:#f68f67;
 	color:#ffffff;
 }
@@ -103,7 +103,7 @@
 /* Slide 4 */
 
 #slide4{
-	background-image:url("./images/rocket.png");
+	background-image:url("../images/rocket.png");
 	/*background-color:#020202;*/
 	color:#ffffff;
 }
