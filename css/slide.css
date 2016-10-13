@@ -49,8 +49,9 @@
 
 #slide2{
 	background-image:url("../images/paperplane.png");
-	background-color:#f68f67;
+	background-color:#f2aa8e;
 	color:#ffffff;
+
 }
 #slide2 h1 {
 	font-size: 3em;
@@ -83,13 +84,6 @@
 	font-size: 1.5em;
 	color: #020202;
 	padding-bottom:20px;
-	font-weight: 400;
-}
-#test{
-	background-color:#81C7D4;
-	color:#020202;
-	text-align:center;
-	font-size: 1.5em;
 	font-weight: 400;
 }
 

@@ -7,7 +7,7 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-		<meta property="og:title" content="UIUX -- Please Refrigerator" >
+		<meta property="og:title" content="Please Refrigerator" >
 		<meta property="og:type" content="Website" >
 		<meta property="og:url" content="https://sinya.github.io/wp2014s_hw2/index.html" >
 		<meta property="og:image" content="http://sr.photos2.fotosearch.com/bthumb/CSP/CSP993/k14866892.jpg" >
@@ -17,29 +17,32 @@
 		<link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Amarante' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
-		
+		<script src="./js/jquery.min.js"></script>
+
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
 		<!-- Optional theme -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
 		<!-- Latest compiled and minified JavaScript -->
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     	<link rel="stylesheet" href="./css/jquery.fullPage.css" type="text/css" />
 
+		<link rel="stylesheet" href="./css/nav.css" type="text/css">
+
 		<link rel="stylesheet" href="./css/normalize.css" type="text/css">
 		<link rel="stylesheet" href="./css/grid.css" type="text/css">
-		<link rel="stylesheet" href="./css/nav.css" type="text/css">
-		<link rel="stylesheet" href="./css/aboutme.css" type="text/css" >
+		<link rel="stylesheet" href="./css/slide.css" type="text/css" >
+		<link rel="stylesheet" href="./css/test.css" type="text/css" >
 
 
 </head>
 
 <body>
 
-		<div class="menu">
+<!-- 		<div class="menu">
 
 			<div class="container">
 
@@ -58,18 +61,27 @@
 
 			</div>
 
-		</div>
+		</div> -->
+
+		<ul id="menu">
+		    <li data-menuanchor="firstPage" class="active"><a href="#1">firstPage</a></li>
+		    <li data-menuanchor="secondPage"><a href="#2">secondPage</a></li>
+		    <li data-menuanchor="3rdPage"><a href="#3">3rdPage</a></li>
+		    <li data-menuanchor="4thpage"><a href="#4">4thpage</a></li>
+		    <li><a href="./milestone.html">Milestone</a></li>
+		</ul>
+
 
 	<!-- slide -->
 
 		<div id="fullpage">
-			<div class="slide section" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+			<div class="section" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
 				<div class="container clearfix">
 
 					<div id="content" class="grid_7">
 						<h1>Who Are We</h1>
 						<h2>NCTU Computer Science Students</h2>
-						<p>Hi, We are <strong>Amber Jiang, Barney Yeh, Joe Huang, Sinya Peng and Ting Yu</strong>. <br><br>We are in the department of computer science. Nice meeting everyone :)</p>
+						<p>Hi, We are <strong>Amber Jiang, Barney Yeh, Joe Huang, Sinya Peng and Ting Yu</strong>. <br><br>Nice meeting everyone :)</p>
 					</div>
 					<div id="decorative" class="grid_5 omega">
 						<img src="images/me.png">
@@ -80,38 +92,67 @@
 
 
 
-			<div class="slide section" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+			<div class="section" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
 				<div class="container clearfix">
 
 					<div id="content" class="grid_12">
-						<h1>Problem</h1>
+						<h1>Problem Definition</h1>
 						<h2><ul>
-	                        <li>There may have lots of food in our refrigerator.</li>
-	                        <li>It would be fun if the refrigerator <strong>can tell us what we can cook</strong> via these ingredients inside!</li>
-	                        <li>Sometimes, we will put food until passing its expiration date which causes much waste. If the refrigerator can <strong>"remind"</strong> us or send the message to our phones, it would reducing wasted food at home. </li> 
-	                        <li>Moreover, it can adjust the electricity which <strong>controls temperature</strong> by detecting the amount of food.</li>
-	                        </ul></h2>
+	                        <li >
+	                        	There may have lots of food in our refrigerator.
+	                        </li>
+	                        <li>
+	                        	It would be fun if the refrigerator <strong>can tell us what we can cook</strong> via these ingredients inside!
+	                        </li>
+	                        <li>
+	                        	Sometimes, we will put food until passing its expiration date which causes much waste. If the refrigerator can <strong>"remind"</strong> us or send the message to our phones, it would reducing wasted food at home. 
+	                        </li> 
+	                        <li>
+	                        	Moreover, it can adjust the electricity which <strong>controls temperature</strong> by detecting the amount of food.
+	                        </li>
+	                        </ul>
+	                    </h2>
 					</div>
-
 				</div>
 			</div>
 
 
 
-			<div class="slide section" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
-	            
+			<div class="section" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
 				<div class="container clearfix">
 					<div id="content" class="grid_12">
-						<h1>What We Want to Do -> Please Refrigerator</h1>
-						<h2>Some applications which make us have nice user experienxe.</h2>
+						<h1>What We Want to Do >> Please Refrigerator</h1>
+						<h2>An application that make us have better user experienxe when using refrigerator.
+						</h2>
 					</div>
-					<div id="test" class="grid_6">Target Population<ul class="list">
-	                     <li>The people who use refrigerator.</li>
-	                    </ul></div>
-	                <div id="test" class="grid_6 omega">Why is it important<ul class="list">
-	                     <li>It might reduce food waste.</li>
-	                     <li>And also add more surprises in life.</li>
-	                    <br><br><br><br>
+					<div id="title" class="grid_4">
+						<strong> Target population </strong>
+						<ul class="list">
+	                     	<li>
+	                     		People who use refrigerator.
+	                     	</li>
+	                     </ul>
+	                </div>
+	                <div id="title" class="grid_4">
+	                	<strong> Why is it important </strong>
+	                	<ul class="list">
+	                     	<li>
+	                     		Reduce wasted food.
+	                     	</li>
+	                     	<li>
+	                     		Add more surprises and convenient in life.
+	                     	</li>
+	                    </ul>
+	                </div>
+	                <div id="title" class="grid_4 omega">
+						<strong> Who are the stakeholders </strong>
+						<ul class="list">
+	                     	<li>
+	                     		Refrigerator Company
+	                     	</li>
+	                     	<li>
+	                     		Food Company
+	                     	</li>
 	                    </ul>
 	                </div>
 				</div>
@@ -119,21 +160,11 @@
 
 
 
-			<div class="slide section" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
+			<div class="section" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
 				<div class="container clearfix">
 					<div id="content" class="grid_12">
-						<h1>Who are the stakeholders?</h1>
-	                    <div class="grid_6"><ul class="list">
-	                        <h2>1. Refrigerator Company<br>
-	                        (Traditional Refrigerator v.s. Smart Refrigerator)</h2>
-	                    </ul></div>
-	                    
-	                    <div  class="grid_6 omega"><ul class="list">
-	                        <h2>2. Ingredient Company</h2>
-
-	                    </ul></div>
+						
 	                    <div class="grid_12">
-						<p >follow us!</p>
 						<p><a href="https://www.facebook.com/SinyayaPeng" target="_blank"><img src="images/fb2.png"></a>&emsp; <a href="mailto:grace5334@gmail.com" ><img src="images/email.png"></a></p>
 	                        </div>
 	                    </div>
@@ -145,18 +176,20 @@
 
 		<footer>
             <hr>
-        <div class="grid_2"><a href="https://www.facebook.com/SinyayaPeng" target="_blank"><img src="images/fb2.png"></a></div>
- <br>
-        Sinya &copy; 2016 All Rights Reserved<br><br>
-	</footer>
+	        <div class="grid_2">
+	        	<a href="https://www.facebook.com/SinyayaPeng" target="_blank">
+	        		<img src="images/fb2.png">
+	        	</a>
+	        </div>
+ 			<br>
+        	Sinya &copy; 2016 All Rights Reserved<br><br>
+		</footer>
 
-	<script src="./js/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.fullPage.min.js"></script>
 	<script type="text/javascript">
 	    $(document).ready(function() {
 	        $('#fullpage').fullpage({
-	            // sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-	            // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+	            anchors: ['1', '2', '3', '4', '5'],
 	            menu: '#menu',
 	            css3: true,
 	            scrollingSpeed: 1000
