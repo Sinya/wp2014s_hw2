@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="../../css/jquery.fullPage.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/test.css"  type="text/css"/>
+	<link rel="stylesheet" href="../../css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="../../css/grid.css" type="text/css">
+	<link rel="stylesheet" href="../../css/nav.css" type="text/css">
+	<link rel="stylesheet" href="../../css/slide.css" type="text/css" >
+
+</head>
+<body>
+	<ul id="menu">
+	    <li><a href="../../index.html"><strong>Home</strong></a></li>
+	    <li><a href="../../milestone.html"><strong>Milestone</strong></a></li>
+		<li><a href="../../moreinfo.html"><strong>More Info</strong></a></li>
+	    <li data-menuanchor="firstPage" class="active"><a href="#1">1</a></li>
+	    <li data-menuanchor="secondPage"><a href="#2">2</a></li>
+	    <li data-menuanchor="3rdPage"><a href="#3">3</a></li>
+	    <li data-menuanchor="4thpage"><a href="#4">4</a></li>
+	    <li data-menuanchor="5thpage"><a href="#5">5</a></li>
+	    <li data-menuanchor="6thpage"><a href="#6">6</a></li>
+	    <li data-menuanchor="7thpage"><a href="#7">7</a></li>
+	</ul>
+
+	<div id="fullpage">
+		<div class="section" data-slide="1" >
+	  		<img class="picture" src="./投影片1.BMP">
+		</div>
+		<div class="section" data-slide="2" >
+
+	  		<img class="picture" src="./投影片2.BMP">
+		</div>
+		<div class="section" data-slide="3" >
+
+	  		<img class="picture" src="./投影片3.BMP">
+		</div>
+		<div class="section" data-slide="4" >
+
+	  		<img class="picture" src="./投影片4.BMP">
+		</div>
+		<div class="section" data-slide="5" >
+
+	  		<img class="picture" src="./投影片5.BMP">
+		</div>
+		<div class="section" data-slide="6" >
+
+	  		<img class="picture" src="./投影片6.BMP">
+		</div>
+		<div class="section" data-slide="7" >
+
+	  		<img class="picture" src="./投影片7.BMP">
+		</div>
+		<div class="section" data-slide="8" >
+
+	  		<img class="picture" src="./投影片8.BMP">
+		</div>
+		<div class="section" data-slide="9" >
+
+	  		<img class="picture" src="./投影片9.BMP">
+		</div>
+		<div class="section" data-slide="10" >
+
+	  		<img class="picture" src="./投影片10.BMP">
+		</div>		
+		<div class="section" data-slide="11" >
+
+	  		<img class="picture" src="./投影片11.BMP">
+		</div>
+		<div class="section" data-slide="12" >
+
+	  		<img class="picture" src="./投影片12.BMP">
+		</div>
+		<div class="section" data-slide="13" >
+
+	  		<img class="picture" src="./投影片13.BMP">
+		</div>
+		<div class="section" data-slide="14" >
+
+	  		<img class="picture" src="./投影片14.BMP">
+		</div>
+		<div class="section" data-slide="15" >
+
+	  		<img class="picture" src="./投影片15.BMP">
+		</div>
+
+		</div>
+
+<script src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            sectionsColor: ['#30343F', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF'],
+            anchors: ['1', '2', '3', '4', '5','6','7','8','9','10','11','12','13','14','15'],
+            menu: '#menu',
+            css3: true,
+            scrollingSpeed: 1000
+        });
+
+        $('#showExamples').click(function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            $('#examplesList').toggle();
+        });
+
+        $('html').click(function(){
+            $('#examplesList').hide();
+        });
+    });
+</script>
+<!-- <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script> -->
+
+</body>
+</html>
