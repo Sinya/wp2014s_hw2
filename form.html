@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html>
 
     <head>
         <script src="jquery.csv.js"> </script>
@@ -12,37 +13,200 @@
         <script src="https://rawgit.com/mholt/PapaParse/master/papaparse.min.js"></script>
         <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
         <script src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js' type='text/javascript'></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      color: #666;
+      line-height: 28px;
+      }
+      h1, h4 {
+      margin: 15px 0 4px;
+      }
+      h1 {
+      font-weight: 400;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-left: 70px;
+      }
+      input:hover {
+      border: 1px solid #1c87c9;
+      }
+      table {
+      width: 100%;
+      }
+      h4 {
+      padding: 15px 0 5px;
+      }
+      .question-answer label {
+      display: inline-block;
+      padding: 0 20px 15px 0;
+      }
+      .question-answer input {
+      width: auto;
+      }
+      th, td {
+      width: 10%;
+      padding: 15px 0;
+      text-align: center;
+      vertical-align: unset;
+      line-height: 18px;
+      font-weight: 400;
+      word-break: break-all;
+      border-bottom: 1px solid #095484;
+      color: #095484;
+      /*display: flex;*/
+      /*align-items: center;*/
+      }
+      .first-col {
+      width: 26%;
+      text-align: left;
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484; 
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      @media (min-width: 568px) {
+      th, td {
+      word-break: keep-all;
+      }
+      }
+    </style>
 </head>
 <body>
 
 </head>
     <body>
-    <form id="mturk_form" method="post" name="mturk_form">
-        <input type="hidden" id="assignmentId" value="" name="assignmentId"/>
+      <div class="testbox">
+        <form id="mturk_form" method="post" name="mturk_form">
+            <input type="hidden" id="assignmentId" value="" name="assignmentId"/>
 
+            <h1><strong>Tweet Emotion Labeling</strong></h1>
 
-        <div id='random_text'>
-        <div/>
-        
-        <br>
-        <div>
-          <label for="Valence">Valence (between 1 and 5):</label>
-          <input type="number" id="Valence" name="Valence" min="1" max="5">
+            <div id='random_text'>
+              <h2 style="color: #005eba;">Please read the tweet below and select the options which best describe your emotion (Can find the VAD figure below for more rating information).<h2><br>
+            </div>
+            
+            <br>
+            <p class="question"><h3>What is your overall impression of this tweet?</h3></p>
+            <table>
+              <tr>
+                <th class="first-col"></th>
+                <th>Pleasant (5)</th>
+                <th>Pleased (4)</th>
+                <th>Neural (3)</th>
+                <th>Unsatisfied (2)</th>
+                <th>Unpleasant (1)</th>
+              </tr>
+              <tr>
+                <td class="first-col">Valence rating</td>
+                <td><input type="radio" value="none" name="Valence" /></td>
+                <td><input type="radio" value="none" name="Valence" /></td>
+                <td><input type="radio" value="none" name="Valence" /></td>
+                <td><input type="radio" value="none" name="Valence" /></td>
+                <td><input type="radio" value="none" name="Valence" /></td>
+              </tr>
+            </table>
+
+            <table>
+              <tr>
+                <th class="first-col"></th>
+                <th>Excited (5)</th>
+                <th>Wide-awake (4)</th>
+                <th>Neural (3)</th>
+                <th>Dull (2)</th>
+                <th>Calm (1)</th>
+              </tr>
+              <tr>
+                <td class="first-col">Arousal rating</td>
+                <td><input type="radio" value="none" name="Arousal" /></td>
+                <td><input type="radio" value="none" name="Arousal" /></td>
+                <td><input type="radio" value="none" name="Arousal" /></td>
+                <td><input type="radio" value="none" name="Arousal" /></td>
+                <td><input type="radio" value="none" name="Arousal" /></td>
+              </tr>
+            </table>
+
+            <table>
+              <tr>
+                <th class="first-col"></th>
+                <th>Dependent (5)</th>
+                <th>Powerlessness (4)</th>
+                <th>Neural (3)</th>
+                <th>Powerful (2)</th>
+                <th>Independent (1)</th>
+              </tr>
+              <tr>
+                <td class="first-col">Dominance rating</td>
+                <td><input type="radio" value="none" name="Dominance" /></td>
+                <td><input type="radio" value="none" name="Dominance" /></td>
+                <td><input type="radio" value="none" name="Dominance" /></td>
+                <td><input type="radio" value="none" name="Dominance" /></td>
+                <td><input type="radio" value="none" name="Dominance" /></td>
+              </tr>
+            </table>
+              
+              <br>
+              <p id="demo" style="vertical-align:right text-align: right; margin-left:730px;"></p>
+              <div style="vertical-align:right text-align: right; margin-left:650px;">
+
+              <input type="submit" id="submit-button" disabled=true style="width: 150px; margin-right:0px;" value="submit!">
+               </div>
+
+               <div>
+               <img src="./figure/VAD.bmp" alt="VAD" style="vertical-align:middle; text-align:center;">
+               </div>
+
+            </form>
           
-          <label for="Arousal">Arousal (between 1 and 5):</label>
-          <input type="number" id="Arousal" name="Arousal" min="1" max="5">
 
-          <label for="Dominance">Dominance (between 1 and 5):</label>
-          <input type="number" id="Dominance" name="Dominance" min="1" max="5">
 
-          <input type="submit" id="submit-button" disabled=true>
+          <script language='Javascript'>turkSetAssignmentID();</script>
+      
 
-        </div>
+      </div>
 
-    </form>
-        <script language='Javascript'>turkSetAssignmentID();</script>
-    </body>
 
 
 <script>
@@ -58,27 +222,76 @@ var enableSubmit = function(ele) {
 
 Papa.parse(csv_string, {
     complete: function(results) {
+        var regex = /[?&]([^=#]+)=([^&#]*)/g,
+            url = window.location.href,
+            params = {},
+            match;
+        while(match = regex.exec(url)) {
+            params[match[1]] = match[2];
+        }
+
+        console.log(params)
+
         console.log("Finished:", results.data);
 
         // var button = document.getElementById("my-button");
-        var input = document.getElementById("random_text");
+        var random_text_content = document.getElementById("random_text");
 
         // button.addEventListener("click", function() {
-        var seed = Math.floor(Math.random() * results.data.length);
+        // var seed = Math.floor(Math.random() * results.data.length);
+        var seed = params['idx']
         var my_string = results.data[seed][1];
         var spaceCount = (my_string.split(" ").length - 1);
 
         setTimeout(function() { enableSubmit($("#submit-button")) }, (spaceCount+1)*1000);
+        // Set the date we're counting down to
+        var countDownDate = new Date(new Date().getTime());
+        countDownDate.setSeconds( countDownDate.getSeconds() + spaceCount+1 );
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get today's date and time
+          var now = new Date(new Date().getTime());
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="demo"
+          document.getElementById("demo").innerHTML = "Please wait for "
+          + minutes + "m " + seconds + "s ";
+
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "DONE";
+          }
+        }, 1000);
 
 
-        input.innerHTML += '<strong>Text: <\strong> <font style="color: #005eba;">' + results.data[seed][1] + '</font>';
+
+        random_text_content.innerHTML += '<h2><strong>Tweet Text: <\strong> <font style="color: black; background-color: #FFFFFF">' + results.data[seed][1] + '</font><h2>';
         // });
 
 
     }
 });
 
+//function for getting URL parameters
+
+
+
 
 
 
 </script>
+
+</body>
+
+</html>
