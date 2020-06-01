@@ -241,7 +241,7 @@ Papa.parse(csv_string, {
         // var seed = Math.floor(Math.random() * results.data.length);
         var seed = params['idx']
         var my_string = results.data[seed][1];
-        var spaceCount = (my_string.split(" ").length - 1)/2;
+        var spaceCount = (my_string.split(" ").length - 1)/2/2/2;
 
         setTimeout(function() { enableSubmit($("#submit-button")) }, (spaceCount+1)*1000);
         // Set the date we're counting down to
