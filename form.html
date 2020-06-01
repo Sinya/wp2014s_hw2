@@ -198,6 +198,8 @@
                <img src="https://github.com/Sinya/wp2014s_hw2/blob/gh-pages/figure/VAD.jpg?raw=true" alt="VAD" >
                </div>
 
+               <div id="time" style="display: none;"></div>
+
             </form>
           
 
@@ -288,7 +290,18 @@ Papa.parse(csv_string, {
 
 //function for getting URL parameters
 
+$( window ).load(function() {
+  var timeStart = new Date();
 
+  $("#submit-button").on('click', function() {
+    var timeEnd = new Date();
+    var timeDiff = timeEnd - timeStart;
+    console.log(timeDiff);
+
+     document.getElementById("time").innerHTML += '<input type="hidden" name="time_diff" value=' + timeDiff.toString() +'>' + '\n';
+
+  });
+});
 
 
 
