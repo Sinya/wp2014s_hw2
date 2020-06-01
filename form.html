@@ -120,7 +120,6 @@
     <body>
       <div class="testbox">
         <form id="mturk_form" method="post" name="mturk_form">
-            <input type="hidden" id="assignmentId" value="" name="assignmentId"/>
 
             <h1><strong>Tweet Emotion Labeling</strong></h1>
 
@@ -198,6 +197,9 @@
                <img src="https://github.com/Sinya/wp2014s_hw2/blob/gh-pages/figure/VAD.jpg?raw=true" alt="VAD" >
                </div>
 
+               <input id="time" type="hidden">
+
+
             </form>
           
 
@@ -241,7 +243,7 @@ Papa.parse(csv_string, {
         // var seed = Math.floor(Math.random() * results.data.length);
         var seed = params['idx']
         var my_string = results.data[seed][1];
-        var spaceCount = (my_string.split(" ").length - 1)/2/2/2;
+        var spaceCount = (my_string.split(" ").length - 1)/8;
 
         setTimeout(function() { enableSubmit($("#submit-button")) }, (spaceCount+1)*1000);
         // Set the date we're counting down to
@@ -276,14 +278,24 @@ Papa.parse(csv_string, {
 
 
 
-        random_text_content.innerHTML += '<h2><strong>Tweet Text: <\strong> <font style="color: black; background-color: #FFFFFF">' + results.data[seed][1] + '</font><h2>';
-        // });
+        random_text_content.innerHTML += '<h2><strong>Tweet Text: <\strong> <font style="color: black; background-color: #FFFFFF">' + results.data[seed][1] + '</font><h2>' + "\n";
 
+        random_text_content.innerHTML +=  '<input type="hidden" name="idx" value=' + seed +'>' + "\n";
 
     }
 });
 
-//function for getting URL parameters
+$( window ).load(function() {
+  var timeStart = new Date();
+
+  $("#submit-button").on('click', function() {
+    var timeEnd = new Date();
+    var timeDiff = timeEnd - timeStart;
+    console.log(timeDiff);
+
+    $("#time").html('Time Difference: ' + timeDiff + ' ms');
+  });
+});
 
 
 
