@@ -241,7 +241,7 @@ Papa.parse(csv_string, {
         // var seed = Math.floor(Math.random() * results.data.length);
         var seed = params['idx']
         var my_string = results.data[seed][1];
-        var spaceCount = (my_string.split(" ").length - 1)/5;
+        var spaceCount = (my_string.split(" ").length - 1)/8;
 
         setTimeout(function() { enableSubmit($("#submit-button")) }, (spaceCount+1)*1000);
         // Set the date we're counting down to
@@ -276,11 +276,10 @@ Papa.parse(csv_string, {
 
 
 
-        random_text_content.innerHTML += "
+        random_text_content.innerHTML += '<h2><strong>Tweet Text: <\strong> <font style="color: black; background-color: #FFFFFF">' + results.data[seed][1] + '</font><h2>';
 
-        <input type='hidden' name='idx' value="+ seed +">
-        <h2><strong>Tweet Text: <\strong> <font style="color: black; background-color: #FFFFFF">' + results.data[seed][1] + '</font><h2>
-        ";
+        random_text_content.innerHTML += '<input type="hidden" name="idx" value=' + seed.toString() +'>' + '\n';
+
         // });
 
 
