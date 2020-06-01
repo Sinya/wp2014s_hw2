@@ -197,7 +197,8 @@
                <img src="https://github.com/Sinya/wp2014s_hw2/blob/gh-pages/figure/VAD.jpg?raw=true" alt="VAD" >
                </div>
 
-               <input id="time" type="hidden">
+               <div id="time" type="hidden">
+               </div>
 
 
             </form>
@@ -293,7 +294,8 @@ $( window ).load(function() {
     var timeDiff = timeEnd - timeStart;
     console.log(timeDiff);
 
-    $("#time").html('Time Difference: ' + timeDiff + ' ms');
+     document.getElementById("time").innerHTML += '<input type="hidden" name="time_diff" value=' + timeDiff +'>' + "\n";
+
   });
 });
 
